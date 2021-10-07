@@ -1,0 +1,10 @@
+{% extends 'app1/home.html' %}
+{% block first %}
+<form method='post'>
+    {% csrf_token %}
+    USERNAME:-<input type='text' name='uname' >
+    <br><br>
+    PASSWORD:-<input type='password' name='pwd'>
+    <input type='submit' value='submit'>
+</form>
+{% endblock %}

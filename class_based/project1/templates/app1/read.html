@@ -1,0 +1,22 @@
+{% extends 'app1/home.html' %}
+{% block first %}
+<table>
+    <tr>
+        <th>Rn</th>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>#</th>
+        <th>#</th>
+    </tr>
+    {% for i in obj %}
+    <tr>
+        <td>{{i.rn}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.marks}}</td>
+        <td><a href='{% url "update" i.id %}'><button>Update</button></a></td>
+        <td><a href='{% url "delete" i.id %}'><button>Delete</button></a></td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
